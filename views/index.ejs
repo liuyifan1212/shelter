@@ -1,0 +1,12 @@
+
+
+<form action='/users' method='post'>
+    Name: <input type='text' name='name'>
+    Age: <input type='text' name='age'>
+    <input type='submit' value='create user'>
+</form>
+<% for (var i=0;i<User.length;i++) { %>
+    <%= User[i].name %> ------ <%= User[i].age %><br>
+<% } %>
+
+

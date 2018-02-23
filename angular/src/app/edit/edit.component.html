@@ -1,0 +1,27 @@
+<style>
+  div{
+    border: 1px solid black;
+    width:400px;
+    height:400px;
+  }
+  form{
+    padding: 20px;
+  }
+</style>
+<h3>Edit this pet</h3>
+<p>{{errors}}</p>
+<div class='container'>
+<form (submit)='update()'>
+Pet name:<br>
+<input type='text' name='name' [(ngModel)]='pet["name"]'><br><br>
+Pet type:<br>
+<input type='text' name='type' [(ngModel)]='pet["type"]'><br><br>
+Description:<br>
+<input type='text' name='description' [(ngModel)]='pet["description"]'><br><br>
+Skills(OPTIONAL):<br>
+Skill1: <input type='text' name='skill1'[(ngModel)]='pet["skill1"]'><br>
+Skill2: <input type='text' name='skill2'[(ngModel)]='pet["skill2"]'><br>
+Skill3: <input type='text' name='skill3'[(ngModel)]='pet["skill3"]'><br><br>
+<button type="submit">Submit</button><button [routerLink]="['/details',id]">Cancel</button>
+</form>
+</div>

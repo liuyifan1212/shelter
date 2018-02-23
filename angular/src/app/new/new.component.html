@@ -1,0 +1,27 @@
+<style>
+  div{
+    border: 1px solid black;
+    width:400px;
+    height:400px;
+  }
+  form{
+    padding: 20px;
+  }
+</style>
+<h3>Know of a pet needing a home?</h3>
+<p>{{errors}}</p>
+<div class='container'>
+<form (submit)='add()'>
+Pet name:<br>
+<input type='text' name='name' [(ngModel)]='newPet["name"]'><br><br>
+Pet type:<br>
+<input type='text' name='type' [(ngModel)]='newPet["type"]'><br><br>
+Description:<br>
+<input type='text' name='description' [(ngModel)]='newPet["description"]'><br><br>
+Skills(OPTIONAL):<br>
+Skill1: <input type='text' name='skill1'[(ngModel)]='newPet["skill1"]'><br>
+Skill2: <input type='text' name='skill2'[(ngModel)]='newPet["skill2"]'><br>
+Skill3: <input type='text' name='skill3'[(ngModel)]='newPet["skill3"]'><br><br>
+<button type="submit">Submit</button><button [routerLink]="['/home']">Cancel</button>
+</form>
+</div>
